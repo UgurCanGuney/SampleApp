@@ -1,0 +1,56 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Product Page";
+}
+<script src="~/Scripts/PageJS/Product.js"></script>
+
+<body>
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <table class="table table-bordered table-striped table-dark table-hover" id="tblProducts" name="tblProducts">
+        </table>
+    </div>
+
+    <div class="modal fade" id="mdlProductDetail" tabindex="-1" role="dialog" aria-labelledby="mdlProductDetail" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+         
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="col-lg-8">
+                            <h5 class="modal-title">Product Detail</h5>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <input type="text" hidden id="productDetailID" name="productDetailID" value="" />
+                            <div class="form-group" style="clear:both">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label class="control-label blue" style="margin:5px 0px 0px 0px !important" for="form-field-1-1"> Name </label>
+                                    <input type="text" class="form-control" id="txtName" name="txtName" />
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label class="control-label blue" style="margin:5px 0px 0px 0px !important" for="form-field-1-1"> Stock Code </label>
+                                    <input type="text" class="form-control" id="txtStockCode" name="txtStockCode" />
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label class="control-label blue" style="margin:5px 0px 0px 0px !important" for="form-field-1-1"> Stock </label>
+                                    <input type="number" class="form-control" id="txtStock" name="txtStock" />
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <label class="control-label blue" style="margin:5px 0px 0px 0px !important" for="form-field-1-1"> Price </label>
+                                    <input type="number" class="form-control" id="txtPrice" name="txtPrice" />
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="javascript:ClearProductDetailModal()">Vazgeç</button>
+                        <button type="submit" class="btn btn-success" onclick="javascript:UpdateProduct()">Kaydet</button>
+                    </div>
+                </div>
+            
+        </div>
+    </div>
+</body>
